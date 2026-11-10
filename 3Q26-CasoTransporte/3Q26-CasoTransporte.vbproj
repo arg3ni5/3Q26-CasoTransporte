@@ -226,7 +226,6 @@
     </Compile>
     <Compile Include="Database\PersonaDB.vb" />
     <Compile Include="Database\UsuarioDB.vb" />
-    <Compile Include="DB\PersonaDB.vb" />
     <Compile Include="Default.aspx.vb">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>Default.aspx</DependentUpon>
@@ -332,6 +331,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="DB\" />
     <Folder Include="Pages\" />
   </ItemGroup>
   <PropertyGroup>
