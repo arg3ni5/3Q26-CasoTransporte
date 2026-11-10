@@ -62,6 +62,7 @@
                 <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
             </footer>
         </div>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </form>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/Scripts/bootstrap.js") %>
