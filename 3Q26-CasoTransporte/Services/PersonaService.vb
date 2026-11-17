@@ -39,7 +39,7 @@
         _personaDB.Delete(id)
     End Sub
 
-    Private Sub ValidarPersona(p As Persona)
+    Public Sub ValidarPersona(p As Persona)
         If p Is Nothing Then Throw New ArgumentException("Datos requeridos.")
         If String.IsNullOrWhiteSpace(p.Identificacion) Then Throw New ArgumentException("La identificación es obligatoria.")
         If String.IsNullOrWhiteSpace(p.NombreCompleto) Then Throw New ArgumentException("El nombre completo es obligatorio.")

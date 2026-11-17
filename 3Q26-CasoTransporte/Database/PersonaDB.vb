@@ -47,11 +47,12 @@ Public Class PersonaDB
 
     ' Inserta la persona y devuelve el IdPersona generado (0 si no se insertó).
     ' El Id es necesario para crear después el Usuario o el Propietario (relación 1:1).
-    Public Function Insert(p As Persona) As Integer
+    ' Si se recibe una transacción, el INSERT forma parte de ella (ver UsuarioService.Registrar).
+    Public Function Insert(p As Persona, Optional tran As SqlTransaction = Nothing) As Integer
         Dim query As String = "INSERT INTO dbo.Personas (Identificacion, NombreCompleto, Correo) " &
                               "OUTPUT INSERTED.IdPersona " &
                               "VALUES (@Identificacion, @NombreCompleto, @Correo)"
-        Dim dt As DataTable = _db.ExecuteQuery(query, BuildParams(p))
+        Dim dt As DataTable = _db.ExecuteQuery(query, BuildParams(p), tran)
         If dt.Rows.Count > 0 Then
             Return Convert.ToInt32(dt.Rows(0)("IdPersona"))
         End If

@@ -274,6 +274,7 @@
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Services\PersonaService.vb" />
+    <Compile Include="Services\UsuarioService.vb" />
     <Compile Include="Site.Master.designer.vb">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
