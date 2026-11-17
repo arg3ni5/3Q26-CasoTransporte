@@ -6,6 +6,10 @@ Public Class Personas
     Private ReadOnly _service As New PersonaService()
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        If SesionUtils.EsAdministrador Then
+            divFormulario.Visible = True
+        End If
+
         If Not IsPostBack Then
             CargarGrid()
         End If

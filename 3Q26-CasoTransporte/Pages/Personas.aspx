@@ -8,7 +8,7 @@
             <asp:Label ID="lblTituloForm" runat="server" Text="Nueva Persona" />
         </div>
 
-        <div class="card-body row g-3">
+        <div class="card-body row g-3" runat="server" id="divFormulario" visible="false">
             <div class="col-md-4">
                 <label>Identificación</label>
                 <asp:TextBox ID="txtIdentificacion" runat="server" CssClass="form-control" />
