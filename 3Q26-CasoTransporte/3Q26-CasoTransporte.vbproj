@@ -123,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="ConnectionStrings.config" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -152,6 +153,8 @@
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
     <Content Include="Pages\Personas.aspx" />
+    <Content Include="Pages\User.aspx" />
+    <Content Include="Pages\Admin.aspx" />
     <Content Include="Pages\Multas.aspx" />
     <Content Include="Pages\Propietarios.aspx" />
     <Content Include="Pages\TiposMulta.aspx" />
@@ -282,6 +285,20 @@
     <Compile Include="Pages\Personas.aspx.vb">
       <DependentUpon>Personas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\User.aspx.designer.vb">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\User.aspx.vb">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin.aspx.designer.vb">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin.aspx.vb">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Pages\Multas.aspx.designer.vb">
       <DependentUpon>Multas.aspx</DependentUpon>
