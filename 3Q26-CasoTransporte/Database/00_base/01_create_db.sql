@@ -1,17 +1,13 @@
-USE TransporteDB;
+﻿/* =========================================================
+   00_base / 01_create_db.sql
+   Crea la base de datos TransporteDB si no existe.
+   Ejecutar primero, conectado a la instancia (master).
+   ========================================================= */
+USE master;
 GO
 
-/* PROPIETARIOS (1:1 with Personas) */
-IF OBJECT_ID('dbo.Propietarios', 'U') IS NULL
+IF DB_ID('TransporteDB') IS NULL
 BEGIN
-  CREATE TABLE dbo.Propietarios (
-    IdPersona INT NOT NULL PRIMARY KEY, -- PK/FK enforces 1:1
-    Telefono NVARCHAR(20) NULL,
-    Direccion NVARCHAR(200) NULL,
-
-    CONSTRAINT FK_Propietarios_Personas
-      FOREIGN KEY (IdPersona) REFERENCES dbo.Personas(IdPersona)
-      ON DELETE CASCADE
-  );
+  CREATE DATABASE TransporteDB;
 END
 GO
