@@ -1,43 +1,50 @@
-﻿<%@ Page Title="Home Page" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.vb" Inherits="_3Q26_CasoTransporte._Default" %>
+﻿<%@ Page Title="Inicio" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="false" CodeBehind="Default.aspx.vb" Inherits="_3Q26_CasoTransporte._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <main>
-        <section class="row" aria-labelledby="aspnetTitle">
-            <h1 id="aspnetTitle">ASP.NET</h1>
-            <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-            <p><a href="http://www.asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
+        <section class="mb-4">
+            <h1 class="fw-bold">Bienvenido, <asp:Literal ID="litNombre" runat="server" /></h1>
+            <p class="lead text-muted mb-0">Sistema de control de propietarios, vehículos y multas.</p>
         </section>
 
-        <div class="row">
-            <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-                <h2 id="gettingStartedTitle">Getting started</h2>
-                <p>
-                    ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-                A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-                </p>
-            </section>
-            <section class="col-md-4" aria-labelledby="librariesTitle">
-                <h2 id="librariesTitle">Get more libraries</h2>
-                <p>
-                    NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-                </p>
-            </section>
-            <section class="col-md-4" aria-labelledby="hostingTitle">
-                <h2 id="hostingTitle">Web Hosting</h2>
-                <p>
-                    You can easily find a web hosting company that offers the right mix of features and price for your applications.
-                </p>
-                <p>
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-                </p>
-            </section>
+        <div class="row g-3">
+            <div class="col-sm-6 col-lg-3">
+                <a runat="server" href="~/Pages/Propietarios" class="card h-100 text-decoration-none shadow-sm">
+                    <div class="card-body">
+                        <span class="badge bg-secondary mb-2">Grupo A</span>
+                        <h5 class="card-title text-dark">Propietarios</h5>
+                        <p class="card-text text-muted small">Registrar y consultar propietarios.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <a runat="server" href="~/Pages/Vehiculos" class="card h-100 text-decoration-none shadow-sm">
+                    <div class="card-body">
+                        <span class="badge bg-secondary mb-2">Grupo B</span>
+                        <h5 class="card-title text-dark">Vehículos</h5>
+                        <p class="card-text text-muted small">Registrar vehículos asociados a un propietario.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <a runat="server" href="~/Pages/TiposMulta" class="card h-100 text-decoration-none shadow-sm">
+                    <div class="card-body">
+                        <span class="badge bg-secondary mb-2">Grupo C</span>
+                        <h5 class="card-title text-dark">Tipos de multa</h5>
+                        <p class="card-text text-muted small">Catálogo de multas con monto base y estado.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+                <a runat="server" href="~/Pages/Multas" class="card h-100 text-decoration-none shadow-sm">
+                    <div class="card-body">
+                        <span class="badge bg-secondary mb-2">Grupo D</span>
+                        <h5 class="card-title text-dark">Multas</h5>
+                        <p class="card-text text-muted small">Registrar multas y consultarlas por vehículo.</p>
+                    </div>
+                </a>
+            </div>
         </div>
     </main>
 
