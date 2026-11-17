@@ -4,7 +4,8 @@
 
     <main>
         <section class="mb-4">
-            <h1 class="fw-bold">Bienvenido, <asp:Literal ID="litNombre" runat="server" /></h1>
+            <h1 class="fw-bold">Bienvenido,
+                <asp:Literal ID="litNombre" runat="server" /></h1>
             <p class="lead text-muted mb-0">Sistema de control de propietarios, vehículos y multas.</p>
         </section>
 
@@ -42,6 +43,16 @@
                         <span class="badge bg-secondary mb-2">Grupo D</span>
                         <h5 class="card-title text-dark">Multas</h5>
                         <p class="card-text text-muted small">Registrar multas y consultarlas por vehículo.</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-sm-6 col-lg-3">
+                <a runat="server" href="~/Pages/Personas" class="card h-100 text-decoration-none shadow-sm">
+                    <div class="card-body">
+                        <span class="badge bg-secondary mb-2">Grupo E</span>
+                        <h5 class="card-title text-dark">Personas</h5>
+                        <p class="card-text text-muted small">Registrar y consultar las Personas.</p>
                     </div>
                 </a>
             </div>
