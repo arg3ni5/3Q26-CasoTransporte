@@ -140,14 +140,21 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Auth.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Database\00_base\01_create_db.sql" />
     <Content Include="Database\01_personas_usuarios\01_schema.sql" />
     <Content Include="Database\01_personas_usuarios\02_seed.sql" />
+    <Content Include="Database\02_transporte\01_schema.sql" />
+    <Content Include="Database\02_transporte\02_seed.sql" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Login.aspx" />
+    <Content Include="Pages\Multas.aspx" />
+    <Content Include="Pages\Propietarios.aspx" />
+    <Content Include="Pages\TiposMulta.aspx" />
+    <Content Include="Pages\Vehiculos.aspx" />
     <Content Include="Registro.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -244,7 +251,9 @@
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Models\Persona.vb" />
+    <Compile Include="Models\Multa.vb" />
     <Compile Include="Models\Propietario.vb" />
+    <Compile Include="Models\TipoMulta.vb" />
     <Compile Include="Models\Usuario.vb" />
     <Compile Include="Models\Vehiculo.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -265,6 +274,34 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Pages\Multas.aspx.designer.vb">
+      <DependentUpon>Multas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Multas.aspx.vb">
+      <DependentUpon>Multas.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Propietarios.aspx.designer.vb">
+      <DependentUpon>Propietarios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Propietarios.aspx.vb">
+      <DependentUpon>Propietarios.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\TiposMulta.aspx.designer.vb">
+      <DependentUpon>TiposMulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\TiposMulta.aspx.vb">
+      <DependentUpon>TiposMulta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Vehiculos.aspx.designer.vb">
+      <DependentUpon>Vehiculos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Vehiculos.aspx.vb">
+      <DependentUpon>Vehiculos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Registro.aspx.designer.vb">
       <DependentUpon>Registro.aspx</DependentUpon>
@@ -333,7 +370,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="DB\" />
-    <Folder Include="Pages\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
