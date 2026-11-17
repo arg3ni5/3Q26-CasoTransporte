@@ -6,8 +6,10 @@ Public Class Personas
     Private ReadOnly _service As New PersonaService()
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        If SesionUtils.EsAdministrador Then
+        'Acciones a seguir si es un administrador
+        If Not SesionUtils.EsAdministrador Then
             divFormulario.Visible = True
+            gvPersonas.Columns(4).Visible = True
         End If
 
         If Not IsPostBack Then
@@ -32,16 +34,7 @@ Public Class Personas
             .Correo = txtCorreo.Text.Trim()
         }
 
-        Dim query As String = "INSERT INTO Personas (Identificacion, Nombre, Apellidos, Correo, Edad) VALUES (@Identificacion, @Nombre, @Apellidos, @Correo, @Edad)"
-        Dim params As New List(Of SqlParameter) From {
-             New SqlParameter("@Identificacion", p.Identificacion),
-             New SqlParameter("@Nombre", p.NombreCompleto),
-             New SqlParameter("@Correo", p.Correo)
-         }
-
-        Dim _db As New DBHelper()
-
-        _db.ExecuteNonQuery(query, params)
+        _service.GuardarPersona(p)
 
         SwalUtils.ShowSuccess(Me, "Persona guardada correctamente.")
     End Sub
@@ -83,7 +76,7 @@ Public Class Personas
 
 
                 If e.CommandName = "Seleccionar" Then
-                    Dim p As Persona = _service.ObtenerPorIdentificacion(id)
+                    Dim p As Persona = _service.ObtenerPorId(id)
                     If p IsNot Nothing Then
                         Me.IdPersonaEditar = p.IdPersona
                         txtIdentificacion.Text = p.Identificacion

@@ -32,14 +32,14 @@
             <asp:GridView ID="gvPersonas" runat="server"
                 CssClass="table"
                 AllowPaging="True" AutoGenerateColumns="False"
-                DataKeyNames="Identificacion" 
+                DataKeyNames="IdPersona" 
                 OnRowCommand="gvPersonas_RowCommand">
                 <Columns>
                     <asp:BoundField DataField="IdPersona" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="IdPersona" />
                     <asp:BoundField DataField="Identificacion" HeaderText="Identificacion" SortExpression="Identificacion" />
                     <asp:BoundField DataField="NombreCompleto" HeaderText="Nombre Completo" SortExpression="NombreCompleto" />
                     <asp:BoundField DataField="Correo" HeaderText="Correo" SortExpression="Correo" />
-                    <asp:TemplateField HeaderText="Acciones">
+                    <asp:TemplateField HeaderText="Acciones" Visible="false">
                         <ItemTemplate>
                             <asp:Button ID="btnSeleccionar" runat="server" Text="Editar" CommandName="Seleccionar" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-sm btn-warning me-1" />
                             <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CommandName="Eliminar" CommandArgument='<%# Container.DataItemIndex %>' CssClass="btn btn-sm btn-danger" OnClientClick="return confirm('¿Eliminar este registro?');" />
